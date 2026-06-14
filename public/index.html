@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaS Optimizer v3.0</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loader"><div class="loader-icon"><i class="fas fa-rocket"></i></div><h2>SaaS Optimizer</h2><p>Cargando...</p><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+  </div>
+
+  <!-- Login -->
+  <div id="loginPage" class="page" style="display:none;">
+    <div class="auth-container">
+      <div class="auth-left">
+        <div class="auth-brand">
+          <i class="fas fa-chart-line"></i>
+          <h1>SaaS Optimizer</h1>
+          <p class="auth-subtitle">SaaS Spend Management & Subscription Optimizer</p>
+        </div>
+        <div class="auth-features">
+          <div class="auth-feature"><i class="fas fa-check-circle"></i> Descubre Shadow IT automáticamente</div>
+          <div class="auth-feature"><i class="fas fa-check-circle"></i> Ahorra 20-30% en suscripciones</div>
+          <div class="auth-feature"><i class="fas fa-check-circle"></i> IA optimiza renovaciones</div>
+          <div class="auth-feature"><i class="fas fa-check-circle"></i> Compliance GDPR/SOC2</div>
+        </div>
+        <div class="auth-demo-info">
+          <i class="fas fa-flask"></i> Demo: demo@saasopt.com / demo1234
+        </div>
+      </div>
+      <div class="auth-right">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login">Iniciar Sesión</button>
+          <button class="auth-tab" data-tab="register">Registrarse</button>
+
+        </div>
+                  <div id="loginForm" class="auth-form active">
+          <h2>Acceder</h2>
+          <p>Ingresa tu email para continuar</p>
+          <div class="form-group"><label><i class="fas fa-envelope"></i> Email</label><input type="email" id="loginEmail" placeholder="tu@email.com" value="demo@saasopt.com"></div>
+          <button class="btn-primary" onclick="handleLogin()"><i class="fas fa-arrow-right"></i> Acceder</button>
+          <p class="auth-error" id="loginError"></p>
+        </div>
+  </div>
+
+  <!-- App -->
+  <div id="appPage" class="page" style="display:none;">
+    <div class="app-layout">
+      <nav class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+          <i class="fas fa-chart-line"></i>
+          <span class="sidebar-brand-text">SaaS Optimizer</span>
+          <span class="sidebar-badge" id="planBadge">DEMO</span>
+        </div>
+        <div class="sidebar-menu">
+          <button class="nav-item active" data-page="dashboard"><i class="fas fa-th-large"></i> <span>Dashboard</span></button>
+          <button class="nav-item" data-page="subscriptions"><i class="fas fa-list"></i> <span>Suscripciones</span></button>
+          <button class="nav-item" data-page="discovery"><i class="fas fa-search"></i> <span>AI Discovery</span></button>
+          <button class="nav-item" data-page="recommendations"><i class="fas fa-robot"></i> <span>AI Optimizer</span></button>
+          <button class="nav-item" data-page="renewals"><i class="fas fa-calendar"></i> <span>Renovaciones</span></button>
+          <button class="nav-item" data-page="analytics"><i class="fas fa-chart-bar"></i> <span>Analytics</span></button>
+          <button class="nav-item" data-page="compliance"><i class="fas fa-shield"></i> <span>Compliance</span></button>
+        </div>
+        <div class="sidebar-footer">
+          <button class="nav-item" data-page="settings"><i class="fas fa-cog"></i> <span>Ajustes</span></button>
+          <button class="nav-item" onclick="handleLogout()"><i class="fas fa-sign-out-alt"></i> <span>Salir</span></button>
+        </div>
+      </nav>
+      <main class="main-content" id="mainContent"></main>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

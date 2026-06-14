@@ -1,0 +1,15 @@
+{
+  "name": "saas-optimizer-app",
+  "version": "3.0.0",
+  "description": "SaaS Optimizer - App para clientes",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "express": "^4.21.0",
+    "express-session": "^1.18.0",
+    "bcryptjs": "^2.4.3",
+    "json2csv": "^5.0.7",
+    "pdfkit": "^0.15.0",
+    "dotenv": "^16.4.0"
+  }
+}
