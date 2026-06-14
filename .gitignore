@@ -1,7 +1,4 @@
 node_modules/
-data/
 .env
-*.zip
-.DS_Store
-Thumbs.db
-package-lock.json
+data/*.json
+*.log

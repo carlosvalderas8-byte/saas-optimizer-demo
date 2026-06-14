@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "demo@saasopt.com",
+      "name": "Usuario Demo",
+      "password": "",
+      "plan": "demo",
+      "registeredAt": "2026-06-01T10:00:00.000Z",
+      "settings": { "theme": "dark", "currency": "USD" }
+    }
+  ],
+  "subscriptions": [
+    {"id":1,"userId":1,"name":"Netflix","category":"Entretenimiento","cost":15.99,"billing":"monthly","nextBilling":"2026-07-01","status":"active","notes":"Plan Premium","url":"https://netflix.com"},
+    {"id":2,"userId":1,"name":"Spotify","category":"Música","cost":9.99,"billing":"monthly","nextBilling":"2026-07-05","status":"active","notes":"Plan Familiar","url":"https://spotify.com"},
+    {"id":3,"userId":1,"name":"Adobe Creative Cloud","category":"Productividad","cost":54.99,"billing":"monthly","nextBilling":"2026-07-10","status":"active","notes":"Suite Completa","url":"https://adobe.com"},
+    {"id":4,"userId":1,"name":"Amazon Prime","category":"Compras","cost":49.99,"billing":"yearly","nextBilling":"2026-08-15","status":"active","notes":"Envíos gratis","url":"https://prime.amazon.com"},
+    {"id":5,"userId":1,"name":"Microsoft 365","category":"Productividad","cost":99.99,"billing":"yearly","nextBilling":"2026-09-01","status":"active","notes":"Plan Familiar","url":"https://microsoft.com"}
+  ],
+  "recommendations": [
+    {"id":1,"userId":1,"title":"Revisar Netflix","description":"Cambiar a plan básico ahorraría $8/mes","savings":8,"type":"optimization"},
+    {"id":2,"userId":1,"title":"Duplicidad detectada","description":"Netflix y Amazon Prime Video tienen contenido similar","savings":15.99,"type":"duplicate"},
+    {"id":3,"userId":1,"title":"Suscripción no utilizada","description":"Adobe Creative Cloud no se ha usado en 30 días","savings":54.99,"type":"unused"},
+    {"id":4,"userId":1,"title":"Cambio anual","description":"Spotify anual ahorra $20/año","savings":1.67,"type":"optimization"},
+    {"id":5,"userId":1,"title":"Revisar Microsoft 365","description":"Plan Personal es $69.99/año más barato","savings":30,"type":"optimization"}
+  ]
+}

@@ -1,15 +1,13 @@
 {
   "name": "saas-optimizer-app",
   "version": "3.0.0",
-  "description": "SaaS Optimizer - App para clientes",
+  "description": "SaaS Optimizer - Gestión de Suscripciones",
   "main": "server.js",
   "scripts": { "start": "node server.js" },
   "dependencies": {
-    "express": "^4.21.0",
-    "express-session": "^1.18.0",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
     "bcryptjs": "^2.4.3",
-    "json2csv": "^5.0.7",
-    "pdfkit": "^0.15.0",
-    "dotenv": "^16.4.0"
+    "dotenv": "^16.3.1"
   }
 }
