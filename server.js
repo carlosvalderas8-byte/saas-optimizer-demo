@@ -19,9 +19,10 @@ const ADMIN_API = process.env.ADMIN_API_URL || 'http://localhost:3456';
       process.exit(1);
     }
     // Check original filename
-    const expectedName = 'saas-optimizer-app';
+    const expectedName = "saas-optimizer-app";
+  const allowedDirs = ["saas-optimizer-app", "saas-optimizer-test", "app", "test", "saas-optimizer-github"];
     const dirName = path.basename(path.resolve(__dirname));
-    if (!dirName.includes(expectedName) && dirName !== 'saas-optimizer-app' && dirName !== 'saas-optimizer-test') {
+    if (!allowedDirs.includes(dirName) && !dirName.includes(expectedName)) {
       console.error('⚠️ [PROTECCIÓN] Modificación detectada. Saliendo...');
       process.exit(1);
     }
